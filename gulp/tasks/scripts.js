@@ -9,12 +9,6 @@ scriptsPath = {
   ouput: './build/js/',
 };
 
-// Библиотеки подключаем в libsJS:dev в массив
-// libs = ['node_modules/jquery/dist/jquery.min.js',
-//   'node_modules/svg4everybody/dist/svg4everybody.min.js'
-// ];
-
-
 const webpackConf = {
   mode: $.production ? 'production' : 'development',
   devtool: $.production ? 'none' : 'source-map',
