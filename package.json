@@ -10,7 +10,11 @@
   "author": "Yury",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "babel-loader": "^8.0.6",
     "browser-sync": "^2.26.3",
+    "core-js": "^3.1.2",
     "del": "^3.0.0",
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^6.0.0",
@@ -30,6 +34,8 @@
     "gulp-svgmin": "^2.1.0",
     "gulp.spritesmith": "^6.9.0",
     "imagemin-jpeg-recompress": "^6.0.0",
+    "webpack": "^4.32.1",
+    "webpack-stream": "^5.2.1",
     "yargs": "^13.2.0"
   },
   "dependencies": {

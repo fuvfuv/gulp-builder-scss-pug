@@ -15,10 +15,9 @@ html(lang="ru-RU")
 		link(rel="stylesheet" type='text/css' href="css/style.min.css")
 
 	body(class=pageClass)
-			include ../modules/header
+			include ../modules/header/header
 			main
 				block content
-			include ../modules/footer
-			script(src="js/libs.min.js")
-			script(src="js/main.js")
+			include ../modules/footer/footer
+			script(src="js/bundle.js")
 			block script

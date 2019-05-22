@@ -1,3 +1,1 @@
-(function () {
-  svg4everybody();
-})();
+const hi = `hello world!`;

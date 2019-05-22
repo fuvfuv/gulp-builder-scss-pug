@@ -16,4 +16,4 @@ $.path.tasks.forEach(taskPath => {
 });
 
 
-$.gulp.task('default', $.gulp.series('del', $.gulp.parallel('fonts', 'pug', 'img', 'svg-sprite', 'png-sprite', 'styles', 'libsJS', 'js'), $.gulp.parallel('watch', 'serve')));
+$.gulp.task('default', $.gulp.series('del', $.gulp.parallel('fonts', 'pug', 'img', 'svg-sprite', 'png-sprite', 'styles', 'js'), $.gulp.parallel('watch', 'serve')));
