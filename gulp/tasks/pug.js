@@ -1,27 +1,27 @@
-const plumber = require("gulp-plumber");
-const pug = require("gulp-pug");
-const gulpif = require("gulp-if");
+const plumber = require(`gulp-plumber`);
+const pug = require(`gulp-pug`);
+const gulpif = require(`gulp-if`);
 
-module.exports = function() {
-  $.gulp.task("pug", () => {
+module.exports = function () {
+  $.gulp.task(`pug`, () => {
     return $.gulp
-      .src("./assets/pug/*.pug")
+      .src(`./assets/pug/*.pug`)
       .pipe(plumber())
       .pipe(
-        pug({
-          pretty: true
-        })
+          pug({
+            pretty: true
+          })
       )
       .pipe(
-        gulpif(
-          $.production,
-          pug({
-            pretty: false
-          })
-        )
+          gulpif(
+              $.production,
+              pug({
+                pretty: false
+              })
+          )
       )
       .pipe(plumber.stop())
-      .pipe($.gulp.dest("./build/"))
-      .on("end", $.browserSync.reload);
+      .pipe($.gulp.dest(`./build/`))
+      .on(`end`, $.browserSync.reload);
   });
 };

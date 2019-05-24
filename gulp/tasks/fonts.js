@@ -1,7 +1,7 @@
-module.exports = function() {
-  $.gulp.task("fonts", () => {
+module.exports = function () {
+  $.gulp.task(`fonts`, () => {
     return $.gulp
-      .src("./assets/static/fonts/**/*.*")
-      .pipe($.gulp.dest("./build/fonts/"));
+      .src(`./assets/static/fonts/**/*.*`)
+      .pipe($.gulp.dest(`./build/fonts/`));
   });
 };

@@ -1,7 +1,7 @@
-const del = require("del");
+const del = require(`del`);
 
-module.exports = function() {
-  $.gulp.task("del", function() {
-    return del("./build");
+module.exports = function () {
+  $.gulp.task(`del`, function () {
+    return del(`./build`);
   });
 };
