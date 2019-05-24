@@ -1,19 +1,33 @@
-'use strict';
-const yargs = require('yargs');
+"use strict";
+const yargs = require("yargs");
 const argv = yargs.argv;
 
 global.$ = {
-  gulp: require('gulp'),
-  browserSync: require('browser-sync').create(),
+  gulp: require("gulp"),
+  browserSync: require("browser-sync").create(),
   path: {
-    tasks: require('./gulp/path/path.js')
+    tasks: require("./gulp/path/path.js")
   },
-  production: argv.production,
+  production: argv.production
 };
 
 $.path.tasks.forEach(taskPath => {
   require(taskPath)();
 });
 
-
-$.gulp.task('default', $.gulp.series('del', $.gulp.parallel('fonts', 'pug', 'img', 'svg-sprite', 'png-sprite', 'styles', 'js'), $.gulp.parallel('watch', 'serve')));
+$.gulp.task(
+  "default",
+  $.gulp.series(
+    "del",
+    $.gulp.parallel(
+      "fonts",
+      "pug",
+      "img",
+      "svg-sprite",
+      "png-sprite",
+      "styles",
+      "js"
+    ),
+    $.gulp.parallel("watch", "serve")
+  )
+);
