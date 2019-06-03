@@ -1,8 +1,7 @@
 // Colors
-$white: #fff;
-$black: #000;
-$base-text-color: #000;
-$body-color: #fff;
+:root {
+   --text-color: #6c757d;
+}
 
 // Sizes
 $base-font-size: 16px;
@@ -13,4 +12,4 @@ $tablet-size: 1180px;
 $phone-size: 769px;
 
 // Fonts
-$base-font-family: "Pacifico-Regular", "Arial", sans-serif;
+$base-font-family: "Nunito Sans", sans-serif;
