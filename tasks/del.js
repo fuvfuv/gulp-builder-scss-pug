@@ -1,5 +1,5 @@
 import gulp from "gulp";
-import del from "gulp-del";
+import del from "del";
 
 gulp.task(`del`, () => {
   return del(`./build`);

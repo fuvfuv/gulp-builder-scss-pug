@@ -18,7 +18,7 @@ const spriteConfig = {
   },
 };
 
-gulp.task(`sprites`, () => {
+gulp.task(`svg-sprite`, () => {
   return gulp
     .src(spritePath.input)
     .pipe(svg(spriteConfig))

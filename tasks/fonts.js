@@ -1,4 +1,4 @@
-import gulp from 'gulp';
+import gulp from "gulp";
 
 const fontPath = {
   input: `./assets/static/fonts/**/*.*`,

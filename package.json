@@ -4,14 +4,15 @@
   "description": "frontend starter-kit",
   "main": "gulpfile.js",
   "scripts": {
-    "dev": "gulp",
-    "build": "gulp --production"
+    "start": "gulp dev",
+    "build": "gulp build"
   },
   "author": "uqrock:)",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
+    "@babel/register": "^7.4.4",
     "babel-loader": "^8.0.6",
     "browser-sync": "^2.26.3",
     "core-js": "^3.1.2",
@@ -21,9 +22,7 @@
     "eslint-plugin-import": "^2.18.0",
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^6.0.0",
-    "gulp-cheerio": "^0.6.3",
     "gulp-clean-css": "^4.2.0",
-    "gulp-concat": "^2.6.1",
     "gulp-imagemin": "^5.0.3",
     "gulp-jsmin": "^0.1.5",
     "gulp-plumber": "^1.2.1",
@@ -33,7 +32,6 @@
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.4",
     "gulp-svg-sprite": "^1.5.0",
-    "gulp-svgmin": "^2.1.0",
     "imagemin-giflossy": "^5.1.10",
     "imagemin-mozjpeg": "^8.0.0",
     "imagemin-pngquant": "^8.0.0",
@@ -43,8 +41,7 @@
     "stylelint-config-standard": "^18.3.0",
     "stylelint-order": "^3.0.0",
     "webpack": "^4.32.1",
-    "webpack-stream": "^5.2.1",
-    "yargs": "^13.2.0"
+    "webpack-stream": "^5.2.1"
   },
   "dependencies": {
     "svg4everybody": "^2.1.9"

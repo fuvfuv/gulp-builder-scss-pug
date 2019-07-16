@@ -4,7 +4,7 @@ import plumber from "gulp-plumber";
 import browsersync from "browser-sync";
 
 const pugPath = {
-  input: `./assets/pug/*.pug`,
+  input: `./assets/pug/pages/*.pug`,
   output: `./build/`,
 };
 

@@ -5,9 +5,10 @@ import sourcemaps from "gulp-sourcemaps";
 import autoprefixer from "gulp-autoprefixer";
 import mincss from "gulp-clean-css";
 import rename from "gulp-rename";
+import browsersync from "browser-sync";
 
 const cssPath = {
-  input: `./assets/static/styles/style.css`,
+  input: `./assets/styles/style.scss`,
   output: `./build/css`,
 };
 
@@ -23,7 +24,7 @@ gulp.task(`css`, () => {
     .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(autoprefixer(autoprefixerConfig))
-    .pipe(gulp.dest(cssPath.ouput))
+    .pipe(gulp.dest(cssPath.output))
     .on(`end`, browsersync.reload);
 });
 
@@ -32,7 +33,8 @@ gulp.task(`css:prod`, () => {
     .src(cssPath.input)
     .pipe(sass())
     .pipe(autoprefixer(autoprefixerConfig))
+    .pipe(gulp.dest(cssPath.output))
     .pipe(mincss({level: {1: {specialComments: 0}}}))
     .pipe(rename(`style.min.css`))
-    .pipe(gulp.dest(cssPath.ouput));
+    .pipe(gulp.dest(cssPath.output));
 });
