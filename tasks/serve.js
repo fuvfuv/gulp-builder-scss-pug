@@ -6,5 +6,7 @@ gulp.task(`serve`, () => {
     server: `./build`,
     port: 4000,
     notify: true,
+    // online: false, // Work offline without internet connection
+    // tunnel: true, tunnel: `codeska`, // Demonstration page: http://projectname.localtunnel.me
   });
 });
